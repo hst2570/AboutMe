@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 
   <head>
     <meta charset='utf-8'>
@@ -20,7 +20,7 @@
 
           <h1 id="project_title">About Me </h1>
           <h2 id="project_tagline">[Seong-Tae]</h2>
-          <h3 id="project_tagline">GitHub address : <a href="https://github.com/hst2570">https://github.com/hst2570</a></h3>
+          <h3 id="project_tagline">GitHub address : <a href="https://github.com/hst2570"> https://github.com/hst2570</a></h3>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/hst2570/AboutMe/zipball/master">Download this project as a .zip file</a>
@@ -33,22 +33,54 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>Who is me?</h3>
-
+        <p>
+          안녕하세요. 웹 개발자 꿈나무
+        </p>
         <!-- <p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here
            <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>,
             select a template crafted by a designer, and publish. After your page is generated, you can check out the new
              <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
               -->
-             <hr />
-         <h3>Project</h3>
+        <hr />
+        <h3>Project List</h3>
+        <ul>
+          <li>
+            <a href="" ng-click="toggleWhatsuda = !toggleWhatsuda">왓수다</a>
+            <p ng-show="toggleWhatsuda">
+                show me the money!show me the money!
+            </p>
+          </li>
+          <li>
+            <a href="" ng-click="toggleTip = !toggleTip">대학꿀팁</a>
+            <p ng-show="toggleTip">
+                show me the money!show me the money!
+            </p>
+          </li>
+        </ul>
+        <hr />
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-  <hr />
+        <h3>Study List</h3>
+        <ul>
+          <li>
+            <a href="" ng-click="toggleAngular = !toggleAngular">AngularJS</a>
+            <p ng-show="toggleAngular">
+                show me the money!show me the money!
+            </p>
+          </li>
+          <li>
+            <a href="" ng-click="toggleReact = !toggleReact">ReactJS</a>
+            <p ng-show="toggleReact">
+                show me the money!show me the money!
+            </p>
+          </li>
+          <li>
+            <a href="" ng-click="toggleSpring = !toggleSpring">Spring framework</a>
+            <p ng-show="toggleSpring">
+                show me the money!show me the money!
+            </p>
+          </li>
+        </ul>
 
-<h3>Study List</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-<hr />
       </section>
     </div>
 
@@ -60,6 +92,8 @@
       </footer>
     </div>
 
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
 
 
   </body>
