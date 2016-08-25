@@ -1,7 +1,6 @@
 var myApp = angular.module('myApp', []);
 
 var data = new Data(myApp);
-data.apps('Main');
+data.getProfile('profile');
 
-var dataParse = new DataParse(myApp);
-dataParse.someData();
+console.log('asd');

@@ -12,20 +12,13 @@
   </head>
 
   <body>
-    <a href="test.html">test</a>
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/hst2570/AboutMe">View on GitHub</a>
 
-          <h1 id="project_title">About Me </h1>
-          <h2 id="project_tagline">[Seong-Tae]</h2>
-          <h3 id="project_tagline">GitHub address : <a href="https://github.com/hst2570"> https://github.com/hst2570</a></h3>
-
-            <!-- <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/hst2570/AboutMe/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/hst2570/AboutMe/tarball/master">Download this project as a tar.gz file</a>
-            </section> -->
+          <h1 id="project_title">About Hwang Seong-Tae </h1>
+          <h2 id="project_tagline">GitHub address : <a href="https://github.com/hst2570"> https://github.com/hst2570</a></h3>
         </header>
     </div>
 
@@ -34,48 +27,27 @@
       <section id="main_content" class="inner">
         <h1>I am</h1>
         <p>
-          안녕하세요. "웹 개발자를 꿈꾸는 학생" 황성태입니다. Bootstrap과 Javascript를 사용해 반응형 웹을 개발했었습니다. 또한 다음 API, 구글 API 등을 사용해 ajax를 공부한 적이 있습니다.
+          안녕하세요. "웹 개발자를 꿈꾸는 학생" 황성태입니다. Bootstrap과 Javascript를 사용해 반응형 웹을 개발했었습니다. 또한 다음 API, 구글 API 등을 사용하며 Ajax와 API 사용법들을 공부히였습니다.
            백 엔드 개발은 주로 Spring framework나 PHP를 사용해 개발하였습니다.
         </p>
-        <h6>[사용가능한 기술]</h6>
-        <ul>
-          <li>
-            Javascript
-          </li>
-          <li>
-            AngularJS
-          </li>
-          <li>
-            Spring framework
-          </li>
-          <li>
-            Bootstrap
-          </li>
-          <li>
-            AWS (Amazon web service) - EC2, RDS
-          </li>
 
-        </ul>
+        <div ng-controller="profile">
+          <h6>[사용가능한 기술]</h6>
+          <ul>
+            <li ng-repeat="skill in datas[1].skill">{{skill.name}}</li>
+          </ul>
 
-        <h6>[REST API로 통신하기]</h6>
-        <p>
-          REST API 서버를 제작해 AWS의 EC2에 올려 배포한 경험이 있습니다. 지난 학기 제주 관광과 비콘을 융합한 관광 어플리케이션 제작 프로젝트인 왓수다를 진행했었습니다.
-           안드로이드 어플리케이션, 웹 사이트, 프로젝트 당시 사용했던 라즈베리 파이 웹 서버 간의 통신을 위해 REST API 서버를 제작하였습니다.
-        </p>
-
-        <h6>[웹의 발전과정을 보았다.]</h6>
-        <p>
-          처음 웹을 개발할 때 컨트롤, 모델, 뷰 모두를 하나의 파일로 관리하였습니다. 기능의 추가나 삭제 시 이 방식의 불편함을 알게 되어 개선점을 찾았습니다. 개선은 MVC 모델을 적용하는 방법이었고 Spring 프레임워크를 공부하며 웹의 발전과정을 이해하게 되었습니다.
-        </p>
-
-        <h6>[말이 통하는 사람]</h6>
-        <p>
-          모든 프로젝트의 시작은 팀원들과의 소통이라 생각합니다. 학부의 소속된 연구실에서 대학생을 위한 웹 서비스를 제작했었습니다. 서로의 코드를 확인하지 않고 개발을 진행하여 프로젝트 중간 단계에서 많은 부분을 수정해야 했습니다.
-           이후 문제를 줄이기 위해 기능 하나를 완성할 때마다 의존관계가 있는 팀원들이 코드를 확인하며 진행하였습니다. 그 결과 개발보다 수정에 들었던 시간이 비약적으로 줄어들었습니다.
-        </p>
+          <div ng-repeat="profileData in datas[0].profile">
+              <h6>[{{profileData.title}}]</h6>
+              <p>
+                {{profileData.context}}
+              </p>
+          </div>
+        </div>
 
         <hr />
-        <h3>Project List</h3>
+
+        <h1>Project List</h1>
         <ul>
           <li>
             <a href="" ng-click="toggleWhatsuda = !toggleWhatsuda">왓수다</a>
@@ -98,7 +70,7 @@
         </ul>
         <hr />
 
-        <h3>Study List</h3>
+        <h1>Study List</h1>
         <ul>
           <li>
             <a href="" ng-click="toggleAngular = !toggleAngular">AngularJS</a>
@@ -123,6 +95,7 @@
       </section>
     </div>
 
+
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
@@ -130,8 +103,9 @@
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script async src="//jsfiddle.net/am2h26am/embed/"></script>
+
     <script src="js/angular.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/app.js"></script>
 
 
