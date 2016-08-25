@@ -4,28 +4,41 @@
   <meta charset="utf-8"></meta>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"></meta>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no;"></meta>
-  <title>당나귀</title>
+  <title>Note by Seong-Tae</title>
 </head>
 
 <body ng-app="myApp">
 
   <header>
-    <h1>당나귀<h1>
-    <form>
-      <input ng-model="data" type="text" placeholder="해시태그나 카테고리 검색"/>
-      <p>{{data}}</p>
-      <button>검색</button>
-    </form>
+    <!-- 헤더, 노트 소개  -->
+      <h1>Seong-tae</h1>
   </header>
 
   <article>
-    <div ng-controller = "Main">
-      {{text}}
-    </div>
+    <!-- 자기소개  -->
+    <p>
+      자기소개
+    </p>
+  </article>
 
-    <div ng-controller="someData">
-      {{some}}
-    </div>
+  <hr />
+  <article>
+    <!-- 프로젝트 소개  -->
+    <ul>
+      <li>왓수다</li>
+      <li>대학꿀팁</li>
+    </ul>
+  </article>
+
+  <hr />
+  <article>
+    <!-- 스터디 목록  -->
+    <ul>
+      <li>AngularJS</li>
+      <li>ReactJS</li>
+      <li>Spring framework</li>
+    </ul>
+
   </article>
 
   <footer></footer>
