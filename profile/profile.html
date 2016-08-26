@@ -4,15 +4,37 @@
        안녕하세요. "웹 개발자를 꿈꾸는 학생" 황성태입니다. Bootstrap과 Javascript를 사용해 반응형 웹을 개발했었습니다. 또한 다음 API, 구글 API 등을 사용하며 Ajax와 API 사용법들을 공부하였습니다.
        백 엔드 개발은 주로 Spring framework나 PHP를 사용해 개발하였습니다.
     </p>
-    <h6><strong>[ 사용가능한 기술 ]</strong></h6>
+    <h5><strong>[ 사용가능한 기술 ]</strong></h5>
     <ul>
       <li ng-repeat="skill in datas[1].skill">- {{skill.name}}</li>
     </ul>
-    <a href="" ng-click="toggle = !toggle">자세한 자기 소개</a>
-    <div ng-repeat="profileData in datas[0].profile" ng-show="toggle">
-        <h6><strong>[ {{profileData.title}} ]</strong></h6>
-        <p>
-          {{profileData.context}}
-        </p>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+      자세한 자기 소개보기
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Hwang Seong-Tae</h4>
+          </div>
+          <div class="modal-body">
+            <div ng-repeat="profileData in datas[0].profile">
+                <h4><strong>[ {{profileData.title}} ]</strong></h4>
+                <p>
+                  {{profileData.context}}
+                </p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
