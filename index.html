@@ -1,29 +1,22 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html>
 
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Aboutme : ">
-
     <link rel="stylesheet" type="text/css" media="screen" href="static/stylesheets/stylesheet.css">
-
     <title>About Me</title>
+
   </head>
 
-  <body>
+  <body ng-app="myApp">
     <!-- HEADER -->
     <div id="header_wrap" class="outer" ng-include="'fragment/header.html'"></div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>I am</h1>
-        <p>
-           안녕하세요. "웹 개발자를 꿈꾸는 학생" 황성태입니다. Bootstrap과 Javascript를 사용해 반응형 웹을 개발했었습니다. 또한 다음 API, 구글 API 등을 사용하며 Ajax와 API 사용법들을 공부하였습니다.
-           백 엔드 개발은 주로 Spring framework나 PHP를 사용해 개발하였습니다.
-        </p>
-
         <!-- profile -->
         <div ng-include="'profile/profile.html'"></div>
 
@@ -49,8 +42,9 @@
 
     <script src="static/js/angular.js"></script>
     <script src="static/js/app.js"></script>
-    <script src="profile/data.js"></script>
-    <script src="profile/profile.js"></script>
+    <script src="profile/profileController.js"></script>
+    <script src="project/projectController.js"></script>
+    <script src="study/studyController.js"></script>
 
   </body>
 </html>
