@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Aboutme : ">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="static/stylesheets/stylesheet.css">
 
     <title>About Me</title>
   </head>
@@ -18,25 +18,9 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>I am</h1>
-        <p>
-           안녕하세요. "웹 개발자를 꿈꾸는 학생" 황성태입니다. Bootstrap과 Javascript를 사용해 반응형 웹을 개발했었습니다. 또한 다음 API, 구글 API 등을 사용하며 Ajax와 API 사용법들을 공부하였습니다.
-           백 엔드 개발은 주로 Spring framework나 PHP를 사용해 개발하였습니다.
-        </p>
 
-        <div ng-controller="profile">
-          <h6>[사용가능한 기술]</h6>
-          <ul>
-            <li ng-repeat="skill in datas[1].skill">{{skill.name}}</li>
-          </ul>
-
-          <div ng-repeat="profileData in datas[0].profile">
-              <h6>[{{profileData.title}}]</h6>
-              <p>
-                {{profileData.context}}
-              </p>
-          </div>
-        </div>
+        <!-- profile -->
+        <div ng-include="'profile/profile.html'"></div>
 
         <hr />
 
@@ -87,14 +71,13 @@
 
       </section>
     </div>
-
+    <br />
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer" ng-include="'fragment/footer.html'"></div>
 
-    <script src="js/angular.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/app.js"></script>
+    <script src="static/js/angular.js"></script>
+    <script src="static/js/app.js"></script>
 
 
   </body>

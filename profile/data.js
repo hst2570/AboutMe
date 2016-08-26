@@ -9,7 +9,7 @@ class Data {
 
       $http({
         method : 'GET',
-        url : './profile.json'
+        url : 'profile/profile.json'
       }).success((data, status, headers, config)=>{
         console.log(data);
         $scope.datas = data;
