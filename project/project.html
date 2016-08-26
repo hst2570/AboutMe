@@ -1,20 +1,39 @@
-  <ul ng-controller="projectController">
+<div ng-controller="projectController">
+  <ul ng-repeat="project in datas">
     <li>
-      <a href="" ng-click="toggleWhatsuda = !toggleWhatsuda">왓수다</a>
-      <p>
-        {{desc}}
-      </p>
-      <p ng-show="toggleWhatsuda">
-          show me the money!show me the money!
-      </p>
+      <h5>[{{project.projectName}}]</h5>
     </li>
     <li>
-      <a href="" ng-click="toggleTip = !toggleTip">대학꿀팁</a>
-      <p>
-        설명
-      </p>
-      <p ng-show="toggleTip">
-          show me the money!show me the money!
-      </p>
+      주제 : {{project.subject}}
     </li>
+    <li>
+      기간 : {{project.date}}
+    </li>
+    <li>
+      인원 : {{project.theNumberOfPeople}}
+    </li>
+    <li>
+      사용된 기술 : {{project.skill}}
+    </li>
+    <li>
+      맡은 부분 : {{project.myPart}}
+    </li>
+    <li>
+      {{project.description}}
+    </li>
+    <li>
+      <a href="" ng-click="toggle = !toggle">제작 이미지 보기</a>
+    </li>
+
+    <ul ng-show="toggle">
+      <li ng-repeat="img in project.img">
+        <img src= {{img.path}} />
+        <p>
+          [그림 {{$index+1}}] {{img.description}}
+        </p>
+      </li>
+
+    </ul>
+    <hr />
   </ul>
+</div>

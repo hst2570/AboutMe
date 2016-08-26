@@ -1,0 +1,71 @@
+{
+"project" :
+  [
+    {
+      "projectName" : "왓수다",
+      "subject" : "비콘과 제주관광 융합 어플리케이션",
+      "theNumberOfPeople" : "7",
+      "skill" : "Java, Spring framework, 라즈베리파이, 안드로이드",
+      "myPart" : "REST API",
+      "date" : "2016. 03 ~ 2016. 06 (03)",
+      "description" : "",
+      "img" : [
+        {
+          "path"  : "project/img/whatsuda01.jpg",
+          "description" : "위치정보, 스토리텔링 예상도"
+        },
+        {
+          "path"  : "project/img/whatsuda02.jpg",
+          "description" : "파파라치 카메라 예상도"
+        },
+        {
+          "path"  : "project/img/whatsuda03.jpg",
+          "description" : "어플리케이션 메인 화면 예상도"
+        },
+        {
+          "path"  : "project/img/whatsuda04.jpg",
+          "description" : "어플리케이션 카메라 예상도"
+        },
+        {
+          "path"  : "project/img/whatsuda05.jpg",
+          "description" : "어플리케이션 경로추천 예상도"
+        },
+        {
+          "path"  : "project/img/whatsuda06.jpg",
+          "description" : "어플리케이션 스토리텔링 예상도"
+        }
+      ]
+    },
+    {
+      "projectName" : "대학꿀팁",
+      "subject" : "대학강의 정보 제공 웹 사이트",
+      "theNumberOfPeople" : "3",
+      "skill" : "PHP, Bootstrap, javascipt",
+      "myPart" : "front end, server side",
+      "date" : "2015.05 ~ 2015.10 (05)",
+      "description" : "" ,
+      "img" : [
+        {
+          "path"  : "project/img/tip00.jpg",
+          "description" : "대학꿀팁 모바일 맞춤 화면"
+        },
+        {
+          "path"  : "project/img/tip01.jpg",
+          "description" : "대학꿀팁 메인화면"
+        },
+        {
+          "path"  : "project/img/tip02.jpg",
+          "description" : "대학꿀팁 대학목록"
+        },
+        {
+          "path"  : "project/img/tip03.jpg",
+          "description" : "대학꿀팁 대학세부 페이지"
+        },
+        {
+          "path"  : "project/img/tip04.jpg",
+          "description" : "대학꿀팁 의견게시 페이지"
+        }
+      ]
+    }
+  ]
+}
