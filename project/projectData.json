@@ -5,10 +5,11 @@
       "projectName" : "왓수다",
       "subject" : "비콘과 제주관광 융합 어플리케이션",
       "theNumberOfPeople" : "7",
-      "skill" : "Java, Spring framework, 라즈베리파이, 안드로이드",
+      "skill" : "Java, Spring framework, Raspberry Pi, Android",
       "myPart" : "REST API",
       "date" : "2016. 03 ~ 2016. 06 (03)",
-      "description" : "",
+      "keyword" : "여행지 추천, 파파라치 카메라, 스토리텔링",
+      "description" : "프로젝트 주제는 비콘과 제주관광을 융합한 어플리케이션 제작입니다. 카카오에서 과제를 받아 교내 캡스톤 디자인을 통해 진행한 프로젝트입니다. 사용자가 비콘 영역에 접근 시 이벤트 기능으로 파파라치 카메라, 경로추천, 스토리 텔링이 있습니다. 파파라치 카메라는 사용자를 몰래 찍어주는 기능으로 자연스러운 사진 연출이 가능합니다. 경로추천은 사용자의 다음 관광지를 추천해주는 기능입니다. 스토리 텔링은 비콘에 알맞은 스토리를 텍스트와 음성으로 사용자에게 제공해주는 서비스입니다.",
       "img" : [
         {
           "path"  : "project/img/whatsuda01.jpg",
@@ -43,7 +44,8 @@
       "skill" : "PHP, Bootstrap, javascipt",
       "myPart" : "front end, server side",
       "date" : "2015.05 ~ 2015.10 (05)",
-      "description" : "" ,
+      "keyword" : "강의정보, 대학생 필수 정보",
+      "description" : "대학 새내기였을 때, 강의에 대한 정보가 많이 부족했습니다. 수강 신청을 할 때에도 교수계획서가 있다고는 하지만, 주관적인 정보는 얻을 수 없었습니다. 그래서 저희는 대학교의 강의 정보가 있는 서비스를 구축해보고자 프로젝트를 시작하였습니다. " ,
       "img" : [
         {
           "path"  : "project/img/tip00.jpg",
