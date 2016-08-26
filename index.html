@@ -18,57 +18,28 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+        <h1>I am</h1>
+        <p>
+           안녕하세요. "웹 개발자를 꿈꾸는 학생" 황성태입니다. Bootstrap과 Javascript를 사용해 반응형 웹을 개발했었습니다. 또한 다음 API, 구글 API 등을 사용하며 Ajax와 API 사용법들을 공부하였습니다.
+           백 엔드 개발은 주로 Spring framework나 PHP를 사용해 개발하였습니다.
+        </p>
 
         <!-- profile -->
         <div ng-include="'profile/profile.html'"></div>
 
         <hr />
 
-        <h1>Project List</h1>
-        <ul>
-          <li>
-            <a href="" ng-click="toggleWhatsuda = !toggleWhatsuda">왓수다</a>
-            <p>
-              설명
-            </p>
-            <p ng-show="toggleWhatsuda">
-                show me the money!show me the money!
-            </p>
-          </li>
-          <li>
-            <a href="" ng-click="toggleTip = !toggleTip">대학꿀팁</a>
-            <p>
-              설명
-            </p>
-            <p ng-show="toggleTip">
-                show me the money!show me the money!
-            </p>
-          </li>
-        </ul>
+        <!-- project -->
+        <h1>Project list</h1>
+        <div ng-include="'project/project.html'"></div>
+
         <hr />
 
-        <h1>Study List</h1>
-        <ul>
-          <li>
-            <a href="" ng-click="toggleAngular = !toggleAngular">AngularJS</a>
-            <p ng-show="toggleAngular">
-                show me the money!show me the money!
-            </p>
-          </li>
-          <li>
-            <a href="" ng-click="toggleReact = !toggleReact">ReactJS</a>
-            <p ng-show="toggleReact">
-                show me the money!show me the money!
-            </p>
-          </li>
-          <li>
-            <a href="" ng-click="toggleSpring = !toggleSpring">Spring framework</a>
-            <p ng-show="toggleSpring">
-                show me the money!show me the money!
-            </p>
-          </li>
-        </ul>
+        <!-- Study list -->
+        <h1>Study list</h1>
+        <div ng-include="'study/study.html'"></div>
 
+        <hr />
       </section>
     </div>
     <br />
