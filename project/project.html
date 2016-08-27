@@ -1,7 +1,7 @@
 <div ng-controller="projectController">
-  <ul ng-repeat="project in datas">
+  <ul ng-repeat="project in datas" class="projectSection">
     <li>
-      <h5><strong>[ {{project.projectName}} ]</strong></h5>
+      <h4><strong>[ {{project.projectName}} ]</strong></h4>
     </li>
     <li>
       <strong>주제</strong> : {{project.subject}}
@@ -10,7 +10,7 @@
       <strong>기간</strong> : {{project.date}}
     </li>
     <li>
-      <strong>인원</strong> : {{project.theNumberOfPeople}}
+      <strong>인원</strong> : {{project.theNumberOfPeople}} 명
     </li>
     <li>
       <strong>사용된 기술</strong> : {{project.skill}}
@@ -21,20 +21,21 @@
     <li>
       <strong>키워드</strong> : {{project.keyword}}
     </li>
-    <li>
+    <li class="projectDescription">
       {{project.description}}
     </li>
     <li>
-      <a href="" ng-click="toggle = !toggle">제작 이미지 보기 (Click!)</a>
+      <a href="" ng-click="toggle = !toggle" class="btn btn-default btn-sm btn-block">[{{project.projectName}}] 제작 이미지 보기</a>
     </li>
 
     <ul ng-show="toggle">
-      <li ng-repeat="img in project.img">
-        <img src= {{img.path}} />
-        <p>
-          [그림 {{$index+1}}] {{img.description}}
+      <li ng-repeat="img in project.img" class = "projectImgCenter">
+        <img class="projectImg" src= {{img.path}} />
+        <p class="imgText">
+          <strong>[그림 {{$index+1}}] {{img.description}}</strong>
         </p>
       </li>
+      <a href="" ng-click="toggle = !toggle" class="btn btn-info btn-sm btn-block">이미지 닫기</a>
     </ul>
 
   </ul>

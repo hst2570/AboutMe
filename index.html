@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Aboutme : ">
     <link rel="stylesheet" type="text/css" media="screen" href="static/stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="profile/profile.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="project/project.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="study/study.css">
+
     <title>About Me</title>
+    
     <style>
     ul{
        list-style:none;
@@ -22,7 +27,7 @@
 
   </head>
 
-  <body ng-app="myApp">
+  <body ng-app="myApp" style="font-size : 15px">
     <!-- HEADER -->
     <div id="header_wrap" class="outer" ng-include="'fragment/header.html'"></div>
 
@@ -31,28 +36,23 @@
       <section id="main_content" class="inner">
 
         <!-- profile -->
+        <h1>I am</h1>
         <div ng-include="'profile/profile.html'"></div>
-
-        <hr />
 
         <!-- project -->
         <h1>Project list</h1>
         <div ng-include="'project/project.html'"></div>
 
-        <hr />
-
         <!-- Study list -->
         <h1>Study list</h1>
         <div ng-include="'study/study.html'"></div>
-
-        <hr />
       </section>
     </div>
     <br />
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer" ng-include="'fragment/footer.html'"></div>
-    
+
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="static/js/bootstrap.js"></script>
     <script src="static/js/angular.js"></script>

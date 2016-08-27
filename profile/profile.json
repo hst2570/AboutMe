@@ -20,6 +20,9 @@
     "skill" :
       [
         {
+          "name" : "JAVA"
+        },
+        {
           "name" : "Javascript"
         },
         {
@@ -33,7 +36,16 @@
         },
         {
           "name" : "AWS (Amazon Web Service) - EC2, RDS"
-      }
+        },
+        {
+          "name" : "IntelliJ"
+        },
+        {
+          "name" : "Atom"
+        },
+        {
+          "name" : "Eclipse"
+        }
     ]
   }
 ]

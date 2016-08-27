@@ -1,16 +1,50 @@
   <div ng-controller="profileController">
-    <h1>I am</h1>
-    <p>
-       안녕하세요. "웹 개발자를 꿈꾸는 학생" 황성태입니다. Bootstrap과 Javascript를 사용해 반응형 웹을 개발했었습니다. 또한 다음 API, 구글 API 등을 사용하며 Ajax와 API 사용법들을 공부하였습니다.
-       백 엔드 개발은 주로 Spring framework나 PHP를 사용해 개발하였습니다.
-    </p>
-    <h5><strong>[ 사용가능한 기술 ]</strong></h5>
-    <ul>
-      <li ng-repeat="skill in datas[1].skill">- {{skill.name}}</li>
-    </ul>
+    <div class="profileSection">
+      <p>
+         안녕하세요. "개발자 새내기" 황성태입니다. 웹이나 모바일 환경의 서비스를 만들어 보고싶습니다.
+      </p>
+      <p>
+        Bootstrap과 Javascript를 사용해 반응형 웹을 개발했었습니다. 또한 다음 API, 구글 API 등을 사용하며 Ajax와 API 사용법들을 공부하였습니다.
+      </p>
+      <p>
+        백 엔드 개발은 주로 Spring framework나 PHP를 사용해 개발하였습니다.
+      </p>
+    </div>
+
+    <div class="profileSection">
+      <h4><strong>[ 이력 ]</strong></h4>
+      <ul class="career" >
+        <li style="margin-bottom:5px;">
+          - 영주고등학교 (2006.03 ~ 2009.02)
+        </li>
+        <li style="margin-bottom:5px;">
+          - 제주대학교 컴퓨터공학과 (2010.03 ~ 2017.02 / 졸업예정)
+        </li>
+        <li style="margin-bottom:5px;">
+          - 제주대학교 컴퓨터공학과 IC Lab 소속 (인터넷컴퓨팅 연구실)
+        </li>
+        <li style="margin-bottom:5px;">
+          - CS 현장실습 (2015.07)
+        </li>
+        <li style="margin-bottom:5px;">
+          - 대학꿀팁 프로젝트 in 창업동아리 (2015)
+        </li>
+        <li style="margin-bottom:5px;">
+          - 왓수다 프로젝트 in 캡스톤디자인 (2016)
+        </li>
+      </ul>
+    </div>
+
+    <div class="profileSection profileLast">
+      <h4><strong>[ 사용가능한 기술 & Tool ]</strong></h4>
+      <ul>
+        <li ng-repeat="skill in datas[1].skill" style="margin-bottom:5px;">- {{skill.name}}</li>
+      </ul>
+
+    </div>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    <button type="button" class="btn btn-default btn-sm btn-block" data-toggle="modal" data-target="#myModal">
       자세한 자기 소개보기
     </button>
 
@@ -32,7 +66,6 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>

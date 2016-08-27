@@ -1,0 +1,19 @@
+.projectDescription{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.projectSection{
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+.projectImgCenter{
+  text-align: center;
+  padding-bottom: 20px
+}
+.projectImg{
+  margin-bottom: 0px;
+}
+.imgText{
+  margin: 0px;
+  padding: 0px;
+}
