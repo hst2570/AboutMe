@@ -11,12 +11,19 @@
     <link rel="stylesheet" type="text/css" media="screen" href="study/study.css">
 
     <title>About Me</title>
-    
+
     <style>
     ul{
        list-style:none;
        padding-left: 0px;
        }
+    .divSection{
+      margin-bottom: 20px;
+      border-bottom: 1px dotted gray;
+    }
+    .subTitle{
+      color: #216FC8;
+    }
     </style>
 
     <!-- Latest compiled and minified CSS -->
@@ -36,16 +43,13 @@
       <section id="main_content" class="inner">
 
         <!-- profile -->
-        <h1>I am</h1>
-        <div ng-include="'profile/profile.html'"></div>
+        <div ng-include="'profile/profile.html'" class="divSection"></div>
 
         <!-- project -->
-        <h1>Project list</h1>
-        <div ng-include="'project/project.html'"></div>
+        <div ng-include="'project/project.html'" class="divSection"></div>
 
         <!-- Study list -->
-        <h1>Study list</h1>
-        <div ng-include="'study/study.html'"></div>
+        <div ng-include="'study/study.html'" class="divSection"></div>
       </section>
     </div>
     <br />
