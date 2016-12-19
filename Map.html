@@ -6,12 +6,16 @@
 
 </head>
 <body>
-<input type="text" id="address" value="제주특별자치도 제주시 첨단로 242"/>
-<button id="add" onclick="setAddress()">추가</button>
+주소 : <input type="text" id="address" style="width:50%;height:50px" value="제주특별자치도 제주시 첨단로 242"/></br></br></br>
+이름 : <input type="text" id="name" style="width:50%;height:50px" value=""/>
 
-<div id="map" style="width:100%;height:450px;"></div>
+<button id="add" style="width:20%;height:50px" onclick="setAddress()">추가</button>
+</br></br>
+<div id="map" style="width:100%;height:750px;"></div>
 
-<button id="add" onclick="localStorage.clear();">delete</button>
+</br></br></br>
+
+<button id="add" style="width:20%;height:50px" onclick="localStorage.clear();">DeleteALL</button>
 
 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=fdada071f31587e4d580f801f1a99542&libraries=services"></script>
 <script>
@@ -28,10 +32,12 @@ var geocoder = new daum.maps.services.Geocoder();
 var btnAdd = document.getElementById('add');
 
 var localAdderss = localStorage.getItem('address');
+var localNames = localStorage.getItem('name');
 var splitAdd = localAdderss.split(',');
+var splitNames = localNames.split(',');
 
 for(var i = 0; i < splitAdd.length ; i++){
-	setMarker(splitAdd[i]);
+	setMarker(splitAdd[i], splitNames[i]);
 }
 
 // 주소로 좌표를 검색합니다
@@ -40,18 +46,22 @@ function setAddress(){
 	var localAdd = localStorage.getItem('address');
 	localStorage.setItem('address', address+","+localAdd);
 
+  var name = document.getElementById('name').value; // name
+  var localName = localStorage.getItem('name');
+  localStorage.setItem('name', name+","+localName);
+
 	if(address===""){
-		alert("주소를 입력하세요.");
+		alert("주소와 이름을 입력하세요.");
 	}else{
-		setMarker(address);
+		setMarker(address, name);
 		address.value = "";
 	}
 }
 
-function setMarker(address){
+function setMarker(address, name){
 	geocoder.addr2coord(address, function(status, result) {
-
 			// 정상적으로 검색이 완료됐으면
+
 			 if (status === daum.maps.services.Status.OK) {
 
 					var coords = new daum.maps.LatLng(result.addr[0].lat, result.addr[0].lng);
@@ -63,9 +73,9 @@ function setMarker(address){
 					});
 
 					// 인포윈도우로 장소에 대한 설명을 표시합니다
-					// var infowindow = new daum.maps.InfoWindow({
-					// 		// content: '<div style="width:150px;text-align:center;padding:6px 0;">우리회사</div>'
-					// });
+					var infowindow = new daum.maps.InfoWindow({
+							content: '<div style="width:80px;text-align:center;padding:6px">'+name+'</div>'
+					});
 					infowindow.open(map, marker);
 
 					// 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
