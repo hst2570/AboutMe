@@ -26,10 +26,13 @@
           "name" : "Javascript"
         },
         {
-          "name" : "AngularJS"
+          "name" : "PHP"
         },
         {
           "name" : "Spring framework"
+        },
+        {
+          "name" : "Laravel"
         },
         {
           "name" : "Bootstrap"
