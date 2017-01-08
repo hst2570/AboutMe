@@ -1,17 +1,25 @@
 <h1 class="subTitle">Study list</h1>
 <ul ng-controller="studyController">
   <li class="studySection">
-    <h4>[ laravel ]</h4>
+    <h4>[ 1. laravel ]</h4>
     <ul>
       <li>
-        - PHP framework
+        - PHP framework </br>
+        - spring framework와 비슷하다. </br>
+        - ORM을 표현하기위해 엘로퀸트 기능이 있다. </br>
+        - 데이터베이스 형상관리 기능인 Migration이 있다.</br>
+        - 데이터시드를 통해 테스트 데이터를 만들수 있다.</br>
+        - ServiceProvider를 사용해 DI(Dependency injection : 의존성 주입)가 가능하다.</br>
+        - Middleware는 http request 요청에 대해 전처리 또는 후처리 기능을 제공한다.</br>
+        - 라라벨 Auth기능으로 인증과 권한 기능을 쉽게 제작할 수 있다.</br>
+        - 템플릿은 blade라는 기능을 제공한다. 사용하기 편하다.
       </li>
+
       <li>
-        - spring framework와 비슷하다.
       </li>
       <li>
         <p class="referenceSiteTitle">
-          - 참고 사이트
+          - <strong>참고 사이트</strong>
         </p>
         <ul class="referenceSite">
           <li>
@@ -24,17 +32,22 @@
     </ul>
   </li>
   <li class="studySection">
-    <h4>[ Spring framework ]</h4>
+    <h4>[ 2. Spring framework ]</h4>
     <ul>
       <li>
-        - Java 기반의 프레임 워크.
+        - Java 기반의 프레임 워크. </br>
+        - DI, AOP를 제공하고 POJO를 사용해 어플리케이션 제작이 가능하다.</br>
+        - ORM을 사용하기위해선 외부 라이브러리인 JPA를 사용하면 된다.</br>
+        - 어노테이션을 사용해 빈 등록이나 설정을 제어할 수 있다.</br>
+        - 하지만 어노테이션이 환경에 종속적인 정보를 갖는다면 더이상 POJO가 아니다.</br>
+        - Maven이나 Gradle을 사용해 많은 자바 라이브러리 사용이 가능하다.
       </li>
       <li>
-        - DI, AOP, POJO
+
       </li>
       <li>
         <p class="referenceSiteTitle">
-          - 참고 사이트
+          - <strong>참고 사이트</strong>
         </p>
         <ul class="referenceSite">
           <li>
@@ -56,4 +69,30 @@
       </li>
     </ul>
   </li>
+  <li class="studySection">
+    <h4>[ 3. RESTful API ]</h4>
+    <ul>
+      <li>
+        - 네트워크 기반 아키텍쳐 </br>
+        - API를 사용할 때 CRUD를 http 메소드를 사용해 조작 </br>
+        - 기존의 "user/add/{?}" 방식이 아닌 Post메소드를 사용한 user/{?} 방법 </br>
+        - 메소드별 기능 = Get : 조회기능,  Post : 새로운 데이터 삽입,  Put : 업데이트,  Delete : 삭제</br>
+        - 컬렉션과 엘리먼트를 나눠 조작한다. 컬렉션은 테이블과 비슷한 의미. 엘리먼트는 각 각의 데이터</br>
+      </li>
+      <li>
+  </li>
+  <li>
+    <p class="referenceSiteTitle">
+      - <strong>참고 사이트</strong>
+    </p>
+    <ul class="referenceSite">
+      <li>
+        <p>
+          <a href="https://spoqa.github.io/2012/02/27/rest-introduction.html">spoqa Tech Blog</a>
+        </p>
+      </li>
+    </ul>
+  </li>
+</ul>
+</li>
 </ul>
